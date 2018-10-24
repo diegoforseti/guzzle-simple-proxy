@@ -2,7 +2,6 @@
 
 namespace DSaouda\GuzzleSimpleProxy\Proxy;
 
-
 final class Proxy
 {
     private $value;

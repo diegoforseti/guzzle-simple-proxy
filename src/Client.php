@@ -28,6 +28,7 @@ final class Client extends Guzzle
     {
         $proxy = $this->proxyManager->getProxy();
         $opts['proxy'] = $proxy;
+
         return $opts;
     }
 }

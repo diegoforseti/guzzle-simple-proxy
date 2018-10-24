@@ -11,7 +11,7 @@ final class Random extends AbstractManager
         $all = $this->proxyList->getAll();
         $values = array_values($all);
 
-        $total = count($all)-1;
+        $total = count($all) - 1;
         $chosen = rand(0, $total);
 
         return $values[$chosen];
