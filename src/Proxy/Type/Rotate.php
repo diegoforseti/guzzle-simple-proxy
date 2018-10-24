@@ -2,12 +2,11 @@
 
 namespace DSaouda\GuzzleSimpleProxy\Proxy\Type;
 
-use DSaouda\GuzzleSimpleProxy\Proxy\ProxyList;
 use DSaouda\GuzzleSimpleProxy\Proxy\AbstractManager;
+use DSaouda\GuzzleSimpleProxy\Proxy\ProxyList;
 
 final class Rotate extends AbstractManager
 {
-
     /**
      * @var \SplQueue
      */
@@ -15,6 +14,7 @@ final class Rotate extends AbstractManager
 
     /**
      * Rotate constructor.
+     *
      * @param ProxyList $proxyList
      */
     public function __construct(ProxyList $proxyList)

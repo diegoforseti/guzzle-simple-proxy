@@ -1,16 +1,16 @@
 <?php
-require_once __DIR__ . '/../vendor/autoload.php';
 
-use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Handler\CurlHandler;
-use GuzzleHttp\Client;
+require_once __DIR__.'/../vendor/autoload.php';
 
-use DSaouda\GuzzleSimpleProxy\Proxy\ProxyList;
-use DSaouda\GuzzleSimpleProxy\Proxy\Proxy;
-use DSaouda\GuzzleSimpleProxy\Proxy\Type\Rotate;
-use DSaouda\GuzzleSimpleProxy\Proxy\Type\Random;
-use DSaouda\GuzzleSimpleProxy\Proxy\Type\Fixed;
 use DSaouda\GuzzleSimpleProxy\Middleware;
+use DSaouda\GuzzleSimpleProxy\Proxy\Proxy;
+use DSaouda\GuzzleSimpleProxy\Proxy\ProxyList;
+use DSaouda\GuzzleSimpleProxy\Proxy\Type\Fixed;
+use DSaouda\GuzzleSimpleProxy\Proxy\Type\Random;
+use DSaouda\GuzzleSimpleProxy\Proxy\Type\Rotate;
+use GuzzleHttp\Client;
+use GuzzleHttp\Handler\CurlHandler;
+use GuzzleHttp\HandlerStack;
 
 $proxyList = new ProxyList();
 $proxyList->add(new Proxy('socks4://95.67.46.86:33325'));
@@ -34,4 +34,3 @@ for ($i = 0; $i <= 10; $i++) {
     echo $response->getBody();
     echo "\n";
 }
-
